@@ -1,0 +1,135 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primer: #E88A9A;        
+    --color-sekunder: #6F8F5D;  
+    --color-tersier: #3F4A3C;          
+    --color-kuartener: #FFFDF8;         
+}
+
+body {
+    margin: 0;
+    font: 1rem/1.6 Roboto, sans-serif;
+    color: var(--color-tersier);
+    background-color: var(--color-kuartener);
+    overflow-wrap: break-word;
+}
+
+header {
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-kuartener);
+    background-color: var(--color-primer);
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
+    background-color: var(--color-sekunder);
+    border-bottom: 1px solid var(--color-tersier);
+}
+
+.nav-link {
+    color: var(--color-kuartener);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: var(--color-primer);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.1rem 1rem;
+    color: var(--color-tersier);
+    background-color: var(--color-kuartener);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 0.1rem;
+}
+
+.button:hover {
+    color: var(--color-sekunder);
+}
+
+.nav-link:focus-visible {
+    outline: 3px solid var(--color-primer);
+    outline-offset: 3px;
+}
+
+.button:focus-visible {
+    outline: 3px solid var(--color-sekunder);
+    outline-offset: 3px;
+}
+
+.container {
+    width: min(100% - 2rem, 1120px);
+    margin-inline: auto;
+}
+
+.card {
+    padding: 2rem;
+    border: 1px solid var(--color-kuartener);
+    border-radius: 12px;
+    background-color: var(--color-kuartener);
+    flex: 1 1 16rem;
+}
+
+.card h2 {
+    margin-top: 0;
+    color: var(--color-primer);
+}
+
+.card img {
+    display: block;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+    border: 4px solid var(--color-primer);
+    border-radius: 12px;
+}
+
+.card ul {
+    padding-left: 1.5rem;
+}
+
+.card a {
+    color: var(--color-primer);
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+footer {
+    padding: 1.5rem;
+    text-align: center;
+    background-color: var(--color-kuartener);
+    border-top: 1px solid var(--color-tersier);
+}
+
+footer p {
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+    .card-list {
+        flex-direction: row;
+    }
+}
