@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Ay-Nyang!</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/app.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>Ay-Nyang!</h1>
+            <button id="tombol-navigasi" class="nav-toggle" type="button"
+                    aria-expanded="false" aria-controls="navigasi">
+                Navigasi
+            </button>
+        </header>
+        <nav id="navigasi">
+            <a class="nav-link" href="#tentang">Ay-Nyang!</a>
+            <a class="nav-link" href="#benefit">Benefit</a>
+            <a class="nav-link" href="#menu">Menu</a>
+            <a class="nav-link" href="#informasi">Informasi</a>
+            <a class="nav-link" href="#faq">FAQ</a>
+            <a class="nav-link" href="#pesan">Pesan</a>
+        </nav>
+        <main class="container">
+            <div class="card-list">
+                <section class="card hero" id="tentang">
+                    <h2>Tentang Ay-Nyang!</h2>
+                    <p>Makan ayam udah pasti kenyang!</p>
+                    <img src="assets/logo.jpg"
+                         alt="Logo Ay-Nyang berupa ilustrasi kepala ayam">
+                    <p>
+                        Ayam custom sesuai selera, tinggal pilih olahan
+                        dan sambalnya. Open PO tiap Sabtu-Minggu,
+                        langsung diantar ke kamu, mahasiswa Polban!
+                    </p>
+                    <a class="button" href="#menu">Lihat Menu</a>
+                </section>
+                <section class="card" id="benefit">
+                    <h2>Benefit</h2>
+                    <ul>
+                        <li>Ayam bisa disesuaikan dengan selera.</li>
+                        <li>Bisa memilih tingkat kepedasan sambal.</li>
+                        <li>Bisa diantar ke lokasi yang diinginkan.</li>
+                    </ul>
+                </section>
+                <section class="card" id="menu">
+                    <h2>Menu</h2>
+                    <div class="filter-menu">
+                        <label for="filter-menu">Pilih kategori:</label>
+                        <select id="filter-menu">
+                            <option value="semua">Semua</option>
+                            <option value="bakar">Bakar</option>
+                            <option value="goreng">Goreng</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+                    <div id="daftar-menu" class="menu-list"></div>
+                    <p>
+                        <strong>Catatan:</strong>
+                        Ayam goreng, krikil, dan krispi bisa
+                        request untuk digeprek atau tidak.
+                    </p>
+                </section>
+                <section class="card" id="informasi">
+                    <h2>Informasi</h2>
+                    <h3>Jadwal Pemesanan</h3>
+                    <p>Open PO setiap Sabtu-Minggu.</p>
+                    <h3>Pengantaran</h3>
+                    <p>
+                        Pesanan dapat diantar pada hari Senin-Jumat
+                        sesuai pilihan.
+                    </p>
+                    <h3>Cara Pembayaran</h3>
+                    <p>
+                        Pembayaran dapat dilakukan melalui COD
+                        atau transfer.
+                    </p>
+                </section>
+                <section class="card" id="faq">
+                    <h2>FAQ</h2>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button"
+                                aria-expanded="false"
+                                aria-controls="jawaban-1">
+                            Kapan bisa melakukan pemesanan?
+                        </button>
+                        <div id="jawaban-1" class="faq-answer" hidden>
+                            <p>
+                                Pemesanan dibuka setiap Sabtu-Minggu.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button"
+                                aria-expanded="false"
+                                aria-controls="jawaban-2">
+                            Apakah ayam bisa request geprek?
+                        </button>
+                        <div id="jawaban-2" class="faq-answer" hidden>
+                            <p>
+                                Bisa. Ayam goreng, krikil, dan krispi
+                                dapat request untuk digeprek.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button"
+                                aria-expanded="false"
+                                aria-controls="jawaban-3">
+                            Bagaimana cara pembayarannya?
+                        </button>
+                        <div id="jawaban-3" class="faq-answer" hidden>
+                            <p>
+                                Pembayaran dapat dilakukan melalui COD
+                                atau transfer.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" type="button"
+                                aria-expanded="false"
+                                aria-controls="jawaban-4">
+                            Sambal apa saja yang tersedia?
+                        </button>
+                        <div id="jawaban-4" class="faq-answer" hidden>
+                            <p>
+                                Tersedia sambal matah, sambal bawang,
+                                sambal terasi, dan sambal ijo.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="card" id="pesan">
+                    <h2>Pesan Sekarang!</h2>
+                    <p>
+                        Tertarik mencoba Ay-Nyang?
+                        Isi formulir berikut untuk menghubungi kami.
+                    </p>
+                    <form id="form-kontak">
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input id="nama" name="nama" type="text"
+                                   placeholder="Masukkan nama"
+                                   autocomplete="name"
+                                   aria-describedby="error-nama">
+                            <p id="error-nama" class="form-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input id="email" name="email" type="email"
+                                   placeholder="Masukkan email"
+                                   autocomplete="email"
+                                   aria-describedby="error-email">
+                            <p id="error-email" class="form-error"></p>
+                        </div>
+                        <div class="form-group">
+                            <label for="isi-pesan">Pesan</label>
+                            <textarea id="isi-pesan" name="pesan" rows="4"
+                                      placeholder="Tulis pesan"
+                                      aria-describedby="error-pesan"></textarea>
+                            <p id="error-pesan" class="form-error"></p>
+                        </div>
+                        <button type="submit" class="button">
+                            Kirim Pesan
+                        </button>
+                        <p id="pesan-berhasil" class="success-message" hidden>
+                            Pesan berhasil dikirim!
+                        </p>
+                    </form>
+                </section>
+            </div>
+        </main>
+        <button id="kembali-atas" class="back-to-top" type="button"
+                aria-label="Kembali ke atas">
+            ↑
+        </button>
+        <button id="ganti-tema" class="theme-toggle" type="button">
+            Tema Gelap
+        </button>
+        <footer>
+            <p>2026 - Ay-Nyang!</p>
+        </footer>
+    </body>
+</html>

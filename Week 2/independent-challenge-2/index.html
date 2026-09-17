@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Accordion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section class="faq">
+            <h1>FAQ</h1>
+            <article class="faq-item">
+                <h2>
+                    <button
+                        class="faq-question"
+                        aria-expanded="false"
+                        aria-controls="jawaban-1">
+                        Apa itu HTML?
+                    </button>
+                </h2>
+                <div id="jawaban-1" class="faq-answer">
+                    <p>
+                        HTML adalah bahasa markup yang digunakan
+                        untuk menyusun struktur halaman web.
+                    </p>
+                </div>
+            </article>
+            <article class="faq-item">
+                <h2>
+                    <button
+                        class="faq-question"
+                        aria-expanded="false"
+                        aria-controls="jawaban-2">
+                        Apa itu CSS?
+                    </button>
+                </h2>
+                <div id="jawaban-2" class="faq-answer">
+                    <p>
+                        CSS digunakan untuk mengatur tampilan
+                        dan tata letak halaman web.
+                    </p>
+                </div>
+            </article>
+            <article class="faq-item">
+                <h2>
+                    <button
+                        class="faq-question"
+                        aria-expanded="false"
+                        aria-controls="jawaban-3">
+                        Apa itu JavaScript?
+                    </button>
+                </h2>
+                <div id="jawaban-3" class="faq-answer">
+                    <p>
+                        JavaScript adalah bahasa pemrograman yang
+                        digunakan untuk membuat halaman web interaktif.
+                    </p>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

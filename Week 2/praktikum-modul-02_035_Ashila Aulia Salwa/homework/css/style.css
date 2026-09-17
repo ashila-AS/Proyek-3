@@ -1,0 +1,240 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --warna-utama: #9b4f70;
+    --warna-sekunder: #d47d9c;
+    --warna-tersier: #8f7480;
+    --warna-latar: #fff7fa;
+    --warna-kartu: #ffffff;
+    --warna-border: #f0cbd8;
+    --warna-input: #fffafd;
+    --warna-error: #bd5a78;
+    --radius: 16px;
+    --transisi: 0.2s ease;
+}
+
+body.tema-gelap {
+    --warna-utama: #cbb9e2;
+    --warna-sekunder: #9d82bf;
+    --warna-tersier: #9289a3;
+    --warna-latar: #100e18;
+    --warna-kartu: #191620;
+    --warna-border: #3b3449;
+    --warna-input: #1f1b28;
+    --warna-error: #d28ca4;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    color: var(--warna-utama);
+    background: var(--warna-latar);
+    transition: background-color var(--transisi), color var(--transisi);
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+.container {
+    width: min(88%, 600px);
+    margin-inline: auto;
+    padding: 48px 0;
+}
+
+.header {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+.subtitle {
+    margin: 6px 0 0;
+    color: var(--warna-tersier);
+    font-size: 14px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button {
+    border: 1px solid var(--warna-border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    color: var(--warna-utama);
+    background: var(--warna-kartu);
+}
+
+.button:hover {
+    background: var(--warna-border);
+}
+
+.button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.button-primary {
+    color: #fff;
+    background: var(--warna-utama);
+    border-color: var(--warna-utama);
+}
+
+.status {
+    min-height: 20px;
+    margin: 0 0 16px;
+    text-align: center;
+    color: var(--warna-tersier);
+    font-size: 13px;
+}
+
+#status[data-state="error"] {
+    color: var(--warna-error);
+}
+
+.profile-card,
+.skill-card {
+    padding: 24px;
+    margin-top: 16px;
+    border: 1px solid var(--warna-border);
+    border-radius: var(--radius);
+    background: var(--warna-kartu);
+}
+
+.profile-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile-avatar {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.profile-info h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#prodi-profil {
+    margin: 2px 0 8px;
+    color: var(--warna-sekunder);
+    font-size: 14px;
+}
+
+#deskripsi-profil {
+    margin: 0;
+    color: var(--warna-tersier);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.detail-button {
+    width: 100%;
+    margin-top: 16px;
+    padding: 10px;
+    border: 1px solid var(--warna-border);
+    border-radius: 8px;
+    background: transparent;
+    color: var(--warna-utama);
+}
+
+.detail {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.detail.is-open {
+    max-height: 100px;
+    opacity: 1;
+    margin-top: 12px;
+    padding: 12px;
+    background: var(--warna-latar);
+    border-radius: 8px;
+}
+
+.section-heading h2 {
+    margin: 0 0 16px;
+    font-size: 18px;
+}
+
+.skill-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 13px;
+}
+
+.input-group {
+    display: flex;
+    gap: 8px;
+}
+
+.input-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--warna-border);
+    border-radius: 8px;
+    background: var(--warna-input);
+    color: var(--warna-utama);
+}
+
+.error {
+    min-height: 18px;
+    margin: 6px 0 0;
+    color: var(--warna-error);
+    font-size: 12px;
+}
+
+#daftar-skill {
+    display: grid;
+    gap: 8px;
+    margin: 16px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+#daftar-skill li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    border: 1px solid var(--warna-border);
+    border-radius: 8px;
+    background: var(--warna-input);
+    font-size: 13px;
+}
+
+#daftar-skill li button {
+    padding: 4px 10px;
+    border: 1px solid var(--warna-border);
+    border-radius: 6px;
+    background: var(--warna-kartu);
+    font-size: 11px;
+}
+
+@media (max-width: 600px) {
+    .input-group {
+        flex-direction: column;
+    }
+}
